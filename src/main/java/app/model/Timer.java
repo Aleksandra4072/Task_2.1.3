@@ -1,6 +1,12 @@
 package app.model;
 
-public class Timer {
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component ("timer")
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+public class Timer{
 
     private Long nanoTime = System.nanoTime();
 
